@@ -14,4 +14,5 @@ sudo pacman-key --populate
 # Do an apt-get update
 sudo pacman -Syy
 
+sudo steamos-readonly enable
 echo "Script done."
