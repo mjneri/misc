@@ -6,5 +6,6 @@
 
 sudo steamos-readonly disable
 sudo pacman -S gcc base-devel glibc linux-api-headers --noconfirm
+sudo steamos-readonly enable
 
 echo "Script done."
