@@ -2,7 +2,7 @@
 # Setup buildroot env.
 # NOTE: Run the script using 'source ./setup.sh'
 
-if [ "$1" = "" ]; then
+if [[ $0 =~ ".sh" ]]; then
   echo "Usage: source ./setup.sh <tag version>"
   echo "Example: source ./setup.sh 2022.10"
   return 1
