@@ -5,6 +5,12 @@
 # NOTE: For package dependency issues, try searching the package in https://archlinux.org/packages/ and installing its dependencies first.
 # Make sure to setup the pacman keys first - see steamdeck_pacman.sh
 
+if [[ $0 =~ ".sh" ]]; then
+  echo "Usage: source ./setup.sh <tag version>"
+  echo "Example: source ./setup.sh 2022.10"
+  return 1
+fi
+
 # Mandatory:
 sudo steamos-readonly disable
 
@@ -14,7 +20,8 @@ sudo pacman -S fakeroot
 # Build and install RealVNC Server
 git clone https://aur.archlinux.org/realvnc-vnc-server.git && cd realvnc-vnc-server
 makepkg -s 
-sudo pacman -U realvnc-vnc-server-7.6.1-1-x86_64.pkg.tar.zst  
+#sudo pacman -U realvnc-vnc-server-7.6.1-1-x86_64.pkg.tar.zst  
+sudo pacman -U `find *.tar.zst`
 
 # Enable the systemd service
 sudo systemctl enable vncserver-x11-serviced 
@@ -30,7 +37,8 @@ opus lame libx11 libxfixes lib32-libxfixes libxrandr libxv libxpresent xorg-util
 libxrender openssl fuse2 fuse3 libfdk-aac pixman --noconfirm
 
 makepkg -s
-sudo pacman -U xrdp-0.9.23.1-1-x86_64.pkg.tar.zst
+#sudo pacman -U xrdp-0.9.23.1-1-x86_64.pkg.tar.zst
+sudo pacman -U `find *.tar.zst`
 
 # Enable the systemd service
 sudo systemctl enable xrdp
