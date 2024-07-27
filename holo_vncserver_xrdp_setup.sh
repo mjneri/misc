@@ -38,7 +38,7 @@ libxrender openssl fuse2 fuse3 libfdk-aac pixman --noconfirm
 
 # Delete existing files
 sudo rm /etc/pam.d/xrdp-sesman
-sudo rm /etc/xrdp/*
+sudo rm /etc/xrdp/* -r
 
 makepkg -s
 #sudo pacman -U xrdp-0.9.23.1-1-x86_64.pkg.tar.zst
