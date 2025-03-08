@@ -14,6 +14,10 @@ fi
 # Mandatory:
 sudo steamos-readonly disable
 
+# Remove existing folders from previous installation
+sudo rm -rf ./xrdp
+sudo rm -rf ./realvnc-vnc-server
+
 # Install fakeroot since this is needed to build RealVNC server
 sudo pacman -S fakeroot 
 
