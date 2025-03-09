@@ -38,7 +38,7 @@ git clone https://aur.archlinux.org/xrdp.git && cd xrdp
 # Install all dependencies needed to build xrdp (yeah, it's a LOT.)
 sudo pacman -S patch autoconf automake pkg-config gcc base-devel glibc linux-api-headers pam libjpeg-turbo \
 opus lame libx11 libxfixes lib32-libxfixes libxrandr libxv libxpresent xorg-util-macros xorgproto libxext \
-libxrender openssl fuse2 fuse3 libfdk-aac pixman --noconfirm
+libxrender openssl fuse2 fuse3 libfdk-aac pixman x264 --noconfirm
 
 # Delete existing files
 sudo rm /etc/pam.d/xrdp-sesman
