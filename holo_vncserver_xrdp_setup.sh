@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# For setting up RealVNC Server and xrdp on Steam Deck.
+# For setting up RealVNC Server and xrdp on Steam Deck. (NOTE: Run holo_tigervnc_setup.sh instead!)
 # Run using 'source holo_vncserver_xrdp_setup.sh'
 # NOTE: For package dependency issues, try searching the package in https://archlinux.org/packages/ and installing its dependencies first.
 # Make sure to setup the pacman keys first - see steamdeck_pacman.sh
